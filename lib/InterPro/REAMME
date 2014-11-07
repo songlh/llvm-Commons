@@ -1,0 +1,11 @@
+
+This pass is to build before and after instruction set for each instruction.
+It can serve as an pre-pass for inter-procedural analysis. 
+
+Instruction is 
+1. the first instruction of a basic block, before set contains last instructions of all its pred
+2. the last instruction of a basic block, after set contains first instructions of all its succ
+3. a call site, after set contains the first instruction of the called function
+4. a return, after set contains all following instructions of its call site. 
+
+
